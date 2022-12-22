@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>opengl_switch.ico</file>
+    </qresource>
+</RCC>
