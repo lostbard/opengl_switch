@@ -148,6 +148,16 @@ void MainWindow::setCurrent(const char *name)
 
           ogl.close();
           oglbak.close();
+
+	  if (! ogl.remove())
+            {
+              QMessageBox msgBox;
+              msgBox.setText("Failed to change opengl files");
+              msgBox.setIcon(QMessageBox::Critical);
+              msgBox.setInformativeText(ogl.errorString());
+              msgBox.setStandardButtons(QMessageBox::Ok);
+              msgBox.exec();
+            }
       }
   }
 
